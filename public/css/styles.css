@@ -33,6 +33,7 @@ a.my-navbar-item:hover {
   color: #ffffff;
 }
 
+.table td:nth-child(1),
 .table td:nth-child(2),
 .table td:nth-child(3),
 .table td:nth-child(4) {
