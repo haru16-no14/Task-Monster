@@ -48,7 +48,12 @@
                   <td><img src="{{ $task->image_path }}" width="40" height="40"></td>
                   <td><b>{{ $task->title }}</b>モンスター</td>
                   <td>{{ $task->formatted_due_date }}</td>
-                  <td><a href="#">編集</a></td>
+                  <td><form action="{{ action('TaskController@destroy', ['id' => $current_folder_id, 'task_id' => $task->id])}}" method="POST">
+                        {{ csrf_field() }}
+                        {{ method_field('delete') }}
+                        <button type="submit" class="btn btn-danger">討伐</button>
+                      </form>
+                  </td>
                 </tr>
               @endforeach
             </tbody>

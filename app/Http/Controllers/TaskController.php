@@ -44,4 +44,15 @@ class TaskController extends Controller
             'id' => $current_folder->id,
         ]);
     }
+    
+    public function destroy(int $id, $task_id) {
+        $current_folder = Folder::find($id);
+        $current_task = Task::find($task_id);
+        
+        $current_task->delete();
+        
+        return redirect()->route('tasks.index', [
+            'id' => $current_folder->id,
+        ]);
+     }
 }

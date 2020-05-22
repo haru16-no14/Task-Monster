@@ -44,10 +44,6 @@
                             "/images/monster10.png",
                             "/images/monster11.png",
                             "/images/monster12.png",
-                            "/images/monster13.png",
-                            "/images/monster14.png",
-                            "/images/monster15.png",
-                            "/images/monster16.png",
                         );
                          
                         $image_rand = $image_rand[mt_rand(0, count($image_rand)-1)];
